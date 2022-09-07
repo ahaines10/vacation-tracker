@@ -9,6 +9,7 @@ export default function NewVacationPage({ addVacation }) {
   });
 
   function handleAddVacation(evt) {
+    console.log("vacation");
     evt.preventDefault();
     addVacation(formData);
     setFormData({

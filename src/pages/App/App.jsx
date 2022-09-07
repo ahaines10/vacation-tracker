@@ -6,11 +6,16 @@ import NewVacationPage from "../NewVacationPage/NewVacationPage";
 import VacationIndexPage from "../VacationIndexPage/VacationIndexPage";
 import NavBar from "../../components/NavBar/NavBar";
 import "./App.css";
+import * as vacationApi from "../../utilities/vacations-api";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [vacations, setVacations] = useState([]);
 
-  function addVacation(formData) {}
+  async function addVacation(formData) {
+    let vacation = await vacationApi.newVacation(formData);
+    const allVacations = [...vacations, vacation];
+  }
 
   return (
     <main className="App">
@@ -23,7 +28,10 @@ export default function App() {
               path="/vacations/new"
               element={<NewVacationPage addVacation={addVacation} />}
             />
-            <Route path="/vacations" element={<VacationIndexPage />} />
+            <Route
+              path="/vacations"
+              element={<VacationIndexPage vacations={vacations} />}
+            />
           </Routes>
         </>
       ) : (
