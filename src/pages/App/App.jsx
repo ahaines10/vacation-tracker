@@ -10,6 +10,8 @@ import "./App.css";
 export default function App() {
   const [user, setUser] = useState(getUser());
 
+  function addVacation(formData) {}
+
   return (
     <main className="App">
       {user ? (
@@ -17,7 +19,10 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
-            <Route path="/vacations/new" element={<NewVacationPage />} />
+            <Route
+              path="/vacations/new"
+              element={<NewVacationPage addVacation={addVacation} />}
+            />
             <Route path="/vacations" element={<VacationIndexPage />} />
           </Routes>
         </>
