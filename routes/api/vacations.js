@@ -5,5 +5,5 @@ const ensureLoggedIn = require("../../config/ensureLoggedIn");
 
 // POST /api/vacations
 router.post("/new", ensureLoggedIn, vacationsCtrl.create);
-
+router.get("/", ensureLoggedIn, vacationsCtrl.get);
 module.exports = router;

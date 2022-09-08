@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
@@ -13,10 +13,20 @@ export default function App() {
   const [vacations, setVacations] = useState([]);
 
   async function addVacation(formData) {
-    let vacation = await vacationApi.newVacation(formData);
-    const allVacations = [...vacations, vacation];
+    console.log("test1");
+    let vacations = await vacationApi.newVacation(formData);
+    console.log(vacations, "testing");
+    setVacations(vacations);
   }
-
+  useEffect(() => {
+    async function getVacation() {
+      let data = await vacationApi.getVacation();
+      console.log("taco", data);
+      setVacations(data);
+    }
+    getVacation();
+  }, []);
+  console.log("vacations", vacations);
   return (
     <main className="App">
       {user ? (
