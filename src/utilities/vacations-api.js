@@ -10,3 +10,7 @@ export function getVacation() {
   console.log("getVacations");
   return sendRequest(`${BASE_URL}/`);
 }
+
+export function newComment(data, id) {
+  return sendRequest(`${BASE_URL}/${id}`, "POST", data);
+}

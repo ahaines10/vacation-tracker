@@ -20,8 +20,7 @@ function create(req, res) {
 
 function get(req, res) {
   //to do: do i need to fetch user vacations or all vacations.This is currently fetching all vacations from every user
-  Vacation.find({}).then((vacations) => {
-    console.log(vacations, "vacations");
+  Vacation.find({ user: req.user._id }).then((vacations) => {
     res.json(vacations);
   });
 }

@@ -1,12 +1,12 @@
 import VacationCard from "../../components/VacationCard/VacationCard";
-export default function VacationDetailsPage({ vacations }) {
+export default function VacationIndexPage({ vacations }) {
   console.log(vacations);
   return (
     <div>
       <h1>My Vacations</h1>
       <ul>
-        {vacations.map((vacations) => (
-          <VacationCard vacations={vacations} />
+        {vacations.map((vacation) => (
+          <VacationCard vacation={vacation} />
         ))}
       </ul>
       ;
