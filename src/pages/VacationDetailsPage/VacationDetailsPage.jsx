@@ -1,6 +1,10 @@
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import { useParams } from "react-router-dom";
-export default function VacationDetailsPage({ vacations, addComment }) {
+export default function VacationDetailsPage({
+  vacations,
+  addComment,
+  deleteComment,
+}) {
   const { hank } = useParams();
   const vacation = vacations.find((v) => v._id === hank);
   console.log(vacations);
@@ -12,7 +16,12 @@ export default function VacationDetailsPage({ vacations, addComment }) {
       <h2>{vacation.activities}</h2>
       <p>{vacation.pricing}</p>
       {vacation.comments.map((reviews) => (
-        <div>{reviews.content}</div>
+        <>
+          <div>{reviews.content}</div>
+          <button onClick={() => deleteComment(vacation._id, reviews._id)}>
+            Delete
+          </button>
+        </>
       ))}
       <CommentsForm addComment={addComment} vacation={vacation} />
     </div>

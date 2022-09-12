@@ -10,7 +10,7 @@ export default function CommentsForm({ addComment, vacation }) {
     addComment(formData, vacation._id);
     setFormData({
       content: "",
-      rating: 0,
+      rating: 1,
     });
   }
   function handleChange(evt) {
@@ -34,6 +34,7 @@ export default function CommentsForm({ addComment, vacation }) {
         onChange={handleChange}
         placeholder="rating"
         required
+        pattern="[1-5]"
         name="rating"
       />
 

@@ -14,3 +14,7 @@ export function getVacation() {
 export function newComment(data, id) {
   return sendRequest(`${BASE_URL}/${id}`, "POST", data);
 }
+
+export function deleteComment(vacayId, commentId) {
+  return sendRequest(`${BASE_URL}/${vacayId}/comments/${commentId}`, "DELETE");
+}

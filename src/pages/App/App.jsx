@@ -23,6 +23,11 @@ export default function App() {
     setVacations(vacations);
   }
 
+  async function deleteComment(vacayId, commentId) {
+    let vacations = await vacationApi.deleteComment(vacayId, commentId);
+    setVacations(vacations);
+  }
+
   useEffect(() => {
     async function getVacation() {
       let data = await vacationApi.getVacation();
@@ -52,6 +57,7 @@ export default function App() {
                 <VacationDetailsPage
                   vacations={vacations}
                   addComment={addComment}
+                  deleteComment={deleteComment}
                 />
               }
             />
