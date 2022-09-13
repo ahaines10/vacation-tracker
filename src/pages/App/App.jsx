@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
 import NewVacationPage from "../NewVacationPage/NewVacationPage";
@@ -26,6 +26,10 @@ export default function App() {
   async function deleteComment(vacayId, commentId) {
     let vacations = await vacationApi.deleteComment(vacayId, commentId);
     setVacations(vacations);
+  }
+  async function updateComment(vacayId, commentId) {
+    // let vacations = await vacationApi.updateComment(vacayId, commentId);
+    // setVacations(vacations);
   }
 
   useEffect(() => {
@@ -58,9 +62,11 @@ export default function App() {
                   vacations={vacations}
                   addComment={addComment}
                   deleteComment={deleteComment}
+                  updateComment={updateComment}
                 />
               }
             />
+            <Route path="/*" element={<Navigate to="/vacations" />} />
           </Routes>
         </>
       ) : (

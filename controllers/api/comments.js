@@ -17,7 +17,9 @@ async function create(req, res) {
   res.json(vacations);
 }
 
-async function edit(req, res) {}
+async function edit(req, res) {
+  console.log("taco");
+}
 
 async function deleteComments(req, res, next) {
   console.log("delete comment");

@@ -18,3 +18,7 @@ export function newComment(data, id) {
 export function deleteComment(vacayId, commentId) {
   return sendRequest(`${BASE_URL}/${vacayId}/comments/${commentId}`, "DELETE");
 }
+
+export function updateComment(vacayId, commentId) {
+  return sendRequest(`${BASE_URL}/${vacayId}/comments/${commentId}`, "PUT");
+}

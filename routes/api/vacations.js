@@ -8,6 +8,7 @@ const ensureLoggedIn = require("../../config/ensureLoggedIn");
 router.post("/new", ensureLoggedIn, vacationsCtrl.create);
 router.post("/:id", ensureLoggedIn, commentsCtrl.create);
 router.delete("/:vid/comments/:cid", ensureLoggedIn, commentsCtrl.delete);
-router.get("/:id/edit", ensureLoggedIn, commentsCtrl.edit);
+router.put("/:vid/comments/:cid", ensureLoggedIn, commentsCtrl.edit);
+
 router.get("/", ensureLoggedIn, vacationsCtrl.get);
 module.exports = router;
