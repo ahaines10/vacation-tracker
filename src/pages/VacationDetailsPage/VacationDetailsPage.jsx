@@ -22,7 +22,7 @@ export default function VacationDetailsPage({
   console.log(vacation);
   return (
     <div>
-      <img src={vacation.image}></img>
+      <img src={vacation.image} alt="vacationimage"></img>
       <h1>{vacation.name}</h1>
       <h2>{vacation.location}</h2>
       <h2>activities: {vacation.activities}</h2>

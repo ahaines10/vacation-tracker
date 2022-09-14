@@ -1,7 +1,15 @@
-form {
-  display: flex;
-  flex-direction: column;
+.commentform > button {
   margin: auto;
-  justify-content: center;
-  align-items: center;
+  color: darkred;
+  background-color: azure;
+}
+.commentform {
+  display: flex;
+  justify-content: "center";
+  align-items: "center";
+  flex-direction: column;
+}
+.commentform > input {
+  height: 10rem;
+  padding-bottom: 9rem;
 }

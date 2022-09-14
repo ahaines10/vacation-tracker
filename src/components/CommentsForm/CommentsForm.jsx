@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./CommentsForm";
+import "./CommentsForm.css";
 export default function CommentsForm({ addComment, vacation }) {
   const [formData, setFormData] = useState({
     content: "",
@@ -20,7 +20,7 @@ export default function CommentsForm({ addComment, vacation }) {
   }
 
   return (
-    <form onSubmit class={handleAddComment}>
+    <form onSubmit={handleAddComment} className="commentform">
       <input
         value={formData.content}
         onChange={handleChange}

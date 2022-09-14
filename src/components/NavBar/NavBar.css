@@ -5,8 +5,8 @@ nav {
 }
 nav > * {
   text-decoration: none;
-  color: black;
-  background-color: brown;
+  color: white;
+  background-color: darkred;
   padding: 0.5rem;
   border-radius: 0.2rem;
   margin-bottom: 0;
