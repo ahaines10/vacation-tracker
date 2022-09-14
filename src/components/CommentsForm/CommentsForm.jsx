@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./CommentsForm";
 export default function CommentsForm({ addComment, vacation }) {
   const [formData, setFormData] = useState({
     content: "",
@@ -19,8 +20,7 @@ export default function CommentsForm({ addComment, vacation }) {
   }
 
   return (
-    <form onSubmit={handleAddComment}>
-      <label>Vacation</label>
+    <form onSubmit class={handleAddComment}>
       <input
         value={formData.content}
         onChange={handleChange}
@@ -28,16 +28,7 @@ export default function CommentsForm({ addComment, vacation }) {
         required
         name="content"
       />
-
-      <input
-        value={formData.rating}
-        onChange={handleChange}
-        placeholder="rating"
-        required
-        pattern="[1-5]"
-        name="rating"
-      />
-
+      <br></br>
       <button value="submit">ADD comment</button>
     </form>
   );

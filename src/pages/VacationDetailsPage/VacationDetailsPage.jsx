@@ -1,6 +1,7 @@
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import { useParams } from "react-router-dom";
 import Comments from "../../components/Comments/Comments";
+import "./VacationDetailsPage.css";
 export default function VacationDetailsPage({
   vacations,
   addComment,
@@ -24,8 +25,8 @@ export default function VacationDetailsPage({
       <img src={vacation.image}></img>
       <h1>{vacation.name}</h1>
       <h2>{vacation.location}</h2>
-      <h2>{vacation.activities}</h2>
-      <p>{vacation.pricing}</p>
+      <h2>activities: {vacation.activities}</h2>
+      <p>price: ${vacation.pricing}.00</p>
       {comments}
       <CommentsForm addComment={addComment} vacation={vacation} />
     </div>

@@ -19,6 +19,10 @@ export function deleteComment(vacayId, commentId) {
   return sendRequest(`${BASE_URL}/${vacayId}/comments/${commentId}`, "DELETE");
 }
 
-export function updateComment(vacayId, commentId) {
-  return sendRequest(`${BASE_URL}/${vacayId}/comments/${commentId}`, "PUT");
+export function updateComment(data, vacayId, commentId) {
+  return sendRequest(
+    `${BASE_URL}/${vacayId}/comments/${commentId}`,
+    "PUT",
+    data
+  );
 }

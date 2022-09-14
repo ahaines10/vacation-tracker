@@ -1,17 +1,20 @@
 import { useState } from "react";
-export default function CommentsForm({ updateComment, vid, comment }) {
+export default function CommentsForm({
+  updateComment,
+  vid,
+  comment,
+  editButton,
+  setEditButton,
+}) {
   const [formData, setFormData] = useState({
-    content: "",
-    rating: 0,
+    content: comment.content,
+    rating: comment.rating,
   });
 
   function handleUpdateComment(evt) {
     evt.preventDefault();
-    updateComment(formData, vacation._id);
-    setFormData({
-      content: comment.content,
-      rating: comment.rating,
-    });
+    updateComment(formData, vid, comment._id);
+    setEditButton(!editButton);
   }
   function handleChange(evt) {
     const newFormData = { ...formData, [evt.target.name]: evt.target.value };

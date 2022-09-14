@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
 import NewVacationPage from "../NewVacationPage/NewVacationPage";
@@ -27,9 +27,10 @@ export default function App() {
     let vacations = await vacationApi.deleteComment(vacayId, commentId);
     setVacations(vacations);
   }
-  async function updateComment(vacayId, commentId) {
-    // let vacations = await vacationApi.updateComment(vacayId, commentId);
-    // setVacations(vacations);
+  async function updateComment(data, vacayId, commentId) {
+    console.log(data, vacayId, commentId);
+    let vacations = await vacationApi.updateComment(data, vacayId, commentId);
+    setVacations(vacations);
   }
 
   useEffect(() => {

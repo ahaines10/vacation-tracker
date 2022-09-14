@@ -1,5 +1,6 @@
 import { useState } from "react";
-import CommentEditForm from "../Comments/Comments";
+import CommentEditForm from "../CommentEditForm/CommentEditForm";
+import "./Comments.css";
 export default function Comments({
   comment,
   vid,
@@ -16,17 +17,21 @@ export default function Comments({
             vid={vid}
             comment={comment}
             updateComment={updateComment}
+            setEditButton={setEditButton}
+            editButton={editButton}
           />
 
           <button onClick={() => setEditButton(!editButton)}>cancel</button>
         </>
       ) : (
         <>
-          <div>{comment.content}</div>
-          <button onClick={() => deleteComment(vid, comment._id)}>
-            Delete
-          </button>
-          <button onClick={() => setEditButton(!editButton)}>Edit</button>
+          <div className="comment">
+            <div>{comment.content}</div>
+            <button onClick={() => deleteComment(vid, comment._id)}>
+              Delete
+            </button>
+            <button onClick={() => setEditButton(!editButton)}>Edit</button>
+          </div>
         </>
       )}
     </>

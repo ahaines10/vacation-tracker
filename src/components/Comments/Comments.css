@@ -1,0 +1,10 @@
+.comment {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-transform: none;
+  align-items: center;
+}
+.comment > button {
+  background-color: darkred;
+}

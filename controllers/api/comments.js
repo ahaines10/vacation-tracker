@@ -18,7 +18,19 @@ async function create(req, res) {
 }
 
 async function edit(req, res) {
-  console.log("taco");
+  console.log("taco", req.params.vid, req.params.cid, req.body);
+  try {
+    const vacation = await Vacation.findById(req.params.vid);
+
+    let comment = await vacation.comments.id(req.params.cid);
+    comment.content = req.body.content;
+    comment.rating = req.body.rating;
+    await vacation.save();
+    let vacations = await Vacation.find({});
+    res.json(vacations);
+  } catch (err) {
+    return console.log(err);
+  }
 }
 
 async function deleteComments(req, res, next) {

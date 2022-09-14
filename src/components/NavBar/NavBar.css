@@ -1,0 +1,13 @@
+nav {
+  /* background-color: aliceblue; */
+  height: 3rem;
+  margin-top: 0;
+}
+nav > * {
+  text-decoration: none;
+  color: black;
+  background-color: brown;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  margin-bottom: 0;
+}
