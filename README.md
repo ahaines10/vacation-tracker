@@ -30,12 +30,12 @@ Welcome to the vacation tracker app were you can track all of yours and otheres 
   <summary>:art: screenshots</summary>
 
    <h3 align="center">add vacation page</h3> | <img
-    src="https://i.imgur.com/pSQxHyP.png"
+    src="https://i.imgur.com/6bn6Yhp.png"
     width="700"
   />
 
    <h3 align="center">All Vacations page</h3> | <img
-    src="https://i.imgur.com/iIzY7yD.png"
+    src="https://i.imgur.com/tlJ8FB5.png"
     width="700"
   /> 
 </details>
