@@ -7,7 +7,7 @@ export default function VacationIndexPage({ vacation }) {
       style={{ backgroundImage: `url(${vacation.image})` }}
     >
       <Link to={`/vacations/${vacation._id}`}>
-        <h1>{vacation.name.Capitalize}</h1>
+        <h1>{vacation.name}</h1>
         <h2>{vacation.location}</h2>
         <h2>{vacation.activities}</h2>
         <p>{vacation.pricing}</p>
