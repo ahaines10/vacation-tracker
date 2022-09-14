@@ -7,12 +7,12 @@ const commentSchema = new Schema(
     content: {
       type: String,
     },
-    rating: {
-      type: Number,
-      min: 1,
-      max: 5,
-      default: 5,
-    },
+    // rating: {
+    //   type: Number,
+    //   min: 1,
+    //   max: 5,
+    //   default: 5,
+    // },
     user: { type: Schema.Types.ObjectId, ref: "User" },
     userName: String,
     userAvatar: String,
