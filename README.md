@@ -69,6 +69,26 @@ Welcome to the vacation tracker app were you can track all of yours and otheres 
     
   </ol>
 </details>
+<h3> Installation Instructions </h3>
+  <ol>
+  <li>
+   Clone my repository
+  </li>
+  <li>
+   CD into hiking-california
+  </li>
+  <li>
+   download express in terminal using "npm i express"
+  </li>
+  <li>
+   connect to mongoose Data Basa
+  </li>
+  <li>
+   npm start
+  </li>
+  <li>
+   nodemon
+  </li>
 
 <details>
   <h3>:link: Links</h3>
