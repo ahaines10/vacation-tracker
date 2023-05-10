@@ -75,10 +75,10 @@ Welcome to the vacation tracker app were you can track all of yours and otheres 
    Clone my repository
   </li>
   <li>
-   CD into hiking-california
+   CD into vacation-tracker
   </li>
   <li>
-   download express in terminal using "npm i express"
+   download react with "create-react-app"
   </li>
   <li>
    connect to mongoose Data Basa
