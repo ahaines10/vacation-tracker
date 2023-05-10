@@ -69,26 +69,6 @@ Welcome to the vacation tracker app were you can track all of yours and otheres 
     
   </ol>
 </details>
-<h3> Installation Instructions </h3>
-  <ol>
-  <li>
-   Clone my repository
-  </li>
-  <li>
-   CD into vacation-tracker
-  </li>
-  <li>
-   download react with "create-react-app"
-  </li>
-  <li>
-   connect to mongoose Data Basa
-  </li>
-  <li>
-   npm start
-  </li>
-  <li>
-   nodemon
-  </li>
 
 <details>
   <h3>:link: Links</h3>
@@ -111,3 +91,48 @@ Welcome to the vacation tracker app were you can track all of yours and otheres 
 - [ ] links to websites that can book your vaccation
 
 - [ ] be able to add more images
+
+### Development Instructions
+
+#### Prerequisites
+
+- [Install and start MongoDB](https://www.mongodb.com/docs/manual/installation/)
+- [Install Node](https://nodejs.org/en/download)
+
+#### Start website
+
+clone repository onto your laptop
+
+```bash
+git clone https://github.com/ahaines10/vacation-tracker.git
+```
+
+`cd` into the new repo
+
+```bash
+cd vacation-tracker
+```
+
+create the react app
+
+```bash
+ create-react-app
+```
+
+Install all required node dependencies
+
+```bash
+npm install
+```
+
+Run the frontend react server
+
+```bash
+npm start
+```
+
+In a separate terminal, start the backend server
+
+```bash
+node server.js
+```
