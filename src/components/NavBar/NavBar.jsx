@@ -10,14 +10,16 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/vacations">My Vacations</Link>
-      &nbsp; &nbsp;
-      <Link to="/vacations/new">New Vacation</Link>
-      &nbsp; &nbsp; Welcome, {user.name}
-      &nbsp; &nbsp;
-      <Link to="" onClick={handleLogOut}>
-        Log Out
-      </Link>
+      <div className="logo">Vacation Tracker</div>
+      <div className="nvbutton">
+        <Link to="/vacations">My Vacations</Link>
+        <Link to="/vacations/new">New Vacation</Link>
+        <Link to="" onClick={handleLogOut}>
+          Log Out
+        </Link>
+        &nbsp; &nbsp; Welcome, {user.name}
+        &nbsp; &nbsp;
+      </div>
     </nav>
   );
 }

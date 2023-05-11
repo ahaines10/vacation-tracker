@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./NewVacationPage.css";
 export default function NewVacationPage({ addVacation }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,45 +27,56 @@ export default function NewVacationPage({ addVacation }) {
   }
 
   return (
-    <form onSubmit={handleAddVacation}>
-      <label>Vacation</label>
-      <input
-        value={formData.name}
-        onChange={handleChange}
-        placeholder="Vacation Name"
-        required
-        name="name"
-      />
-      <input
-        value={formData.image}
-        onChange={handleChange}
-        placeholder="image"
-        required
-        name="image"
-      />
-      <input
-        value={formData.location}
-        onChange={handleChange}
-        placeholder="location"
-        required
-        name="location"
-      />
-      <input
-        value={formData.activities}
-        onChange={handleChange}
-        placeholder="activities"
-        required
-        name="activities"
-      />
-      <input
-        value={formData.pricing}
-        onChange={handleChange}
-        placeholder="pricing"
-        required
-        name="pricing"
-      />
-
-      <button value="submit">ADD VACATION</button>
-    </form>
+    <div className="form-container new-vacation-page">
+      <form onSubmit={handleAddVacation}>
+        <h2 className="dark"> New Vacation</h2>
+        <div className="margin">
+          <input
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Vacation Name"
+            required
+            name="name"
+          />
+        </div>
+        <div className="margin">
+          <input
+            value={formData.image}
+            onChange={handleChange}
+            placeholder="image"
+            required
+            name="image"
+          />
+        </div>
+        <div className="margin">
+          <input
+            value={formData.location}
+            onChange={handleChange}
+            placeholder="location"
+            required
+            name="location"
+          />
+        </div>
+        <div className="margin">
+          <input
+            value={formData.activities}
+            onChange={handleChange}
+            placeholder="activities"
+            required
+            name="activities"
+          />
+        </div>
+        <div className="margin">
+          <input
+            value={formData.pricing}
+            onChange={handleChange}
+            placeholder="pricing"
+            required
+            name="pricing"
+          />
+        </div>
+        <button value="submit">ADD VACATION</button>
+      </form>
+    </div>
   );
 }

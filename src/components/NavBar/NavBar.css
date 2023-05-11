@@ -1,13 +1,29 @@
 nav {
   /* background-color: aliceblue; */
+  display: flex;
   height: 3rem;
   margin-top: 0;
+  background-color: white;
+  align-items: center;
 }
 nav > * {
   text-decoration: none;
-  color: white;
-  background-color: darkred;
+
   padding: 0.5rem;
   border-radius: 0.2rem;
   margin-bottom: 0;
+}
+
+.logo {
+  text-align: left;
+  flex-grow: 1;
+  margin-left: 40px;
+}
+
+.nvbutton a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
 }

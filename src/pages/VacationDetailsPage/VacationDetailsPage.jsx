@@ -21,14 +21,16 @@ export default function VacationDetailsPage({
   ));
   console.log(vacation);
   return (
-    <div>
-      <img src={vacation.image} alt="vacationimage"></img>
-      <h1>{vacation.name}</h1>
-      <h2>{vacation.location}</h2>
-      <h2>activities: {vacation.activities}</h2>
-      <p>price: ${vacation.pricing}.00</p>
-      {comments}
-      <CommentsForm addComment={addComment} vacation={vacation} />
+    <div className="details">
+      <img className="img1" src={vacation.image} alt="vacationimage"></img>
+      <div className="words">
+        <h1>{vacation.name}</h1>
+        <h2>{vacation.location}</h2>
+        <h2>activities: {vacation.activities}</h2>
+        <p>price: ${vacation.pricing}.00</p>
+        {comments}
+        <CommentsForm addComment={addComment} vacation={vacation} />
+      </div>
     </div>
   );
 }
