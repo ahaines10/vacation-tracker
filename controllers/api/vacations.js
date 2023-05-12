@@ -11,7 +11,7 @@ function create(req, res) {
   var vacation = new Vacation(req.body);
   vacation.save(function (err) {
     console.log(vacation, "new vacation");
-    Vacation.find({}).then((vacations) => {
+    Vacation.find({ user: req.user._id }).then((vacations) => {
       console.log(vacations, "vacations");
       res.json(vacations);
     });
